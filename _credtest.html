@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8"></head>
+<body>
+<p id="o">pending</p>
+<script src="/js/crm-data.js"></script>
+<script>
+  setTimeout(function () {
+    var out = [];
+    out.push('wrong=' + CRM.login('admin1234', 'nope'));
+    out.push('baduser=' + CRM.login('someone', 'admin321'));
+    out.push('right=' + CRM.login('admin1234', 'admin321'));
+    out.push('authed=' + CRM.isAuthed());
+    CRM.logout();
+    out.push('afterLogout=' + CRM.isAuthed());
+
+    var db = CRM.loadDB();
+    out.push('seedRequests=' + db.requests.length);
+    out.push('brands=' + CRM.BRANDS.length);
+    out.push('nextId=' + CRM.genRequestId());
+    var bn = CRM.brandName('pdarbar');
+    out.push('brandName=' + bn);
+    out.push('find=' + (CRM.findRequest('CAT-2026-1000') ? 'yes' : 'no'));
+
+    document.title = out.join(' | ');
+    document.getElementById('o').textContent = out.join(' | ');
+  }, 50);
+</script>
+</body></html>

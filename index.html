@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Malay Restaurant — 115 Hill Street, Dehiwala | A Legacy of Food. A Future of Flavour.</title>
+<meta name="description" content="Malay Restaurant, Dehiwala — a heritage flagship of Malay, Sri Lankan, Chinese, Indian and Arabic flavours. A culinary legacy passed down through generations.">
+<meta name="theme-color" content="#14110D">
+<meta property="og:type" content="restaurant">
+<meta property="og:title" content="Malay Restaurant — A Legacy of Food. A Future of Flavour.">
+<meta property="og:description" content="115 Hill Street, Dehiwala. Malay, Sri Lankan, Chinese, Indian and Arabic flavours — a culinary legacy passed down through generations.">
+<meta property="og:image" content="assets/logo.png">
+<meta property="og:locale" content="en_LK">
+<link rel="icon" type="image/png" href="assets/logo.png">
+<link rel="preload" as="image" href="assets/logo.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "Malay Restaurant",
+  "image": "assets/logo.png",
+  "servesCuisine": ["Malay", "Sri Lankan", "Chinese", "Indian", "Arabic"],
+  "telephone": "+94 11 777 7999",
+  "acceptsReservations": "True",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "115 Hill Street",
+    "addressLocality": "Dehiwala",
+    "postalCode": "10350",
+    "addressCountry": "LK"
+  }
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ============ SCROLL PROGRESS ============ -->
+<div id="progress" aria-hidden="true"><span></span></div>
+
+<!-- ============ CURSOR ============ -->
+<div id="cursor" aria-hidden="true"><span class="cursor-dot"></span></div>
+
+<!-- ============ LOADER ============ -->
+<div id="loader" aria-hidden="true">
+  <div class="loader-inner">
+    <svg class="loader-ornament" viewBox="0 0 120 120" width="120" height="120" fill="none">
+      <circle cx="60" cy="60" r="54" stroke="#C9A86A" stroke-width="0.75" opacity="0.5"/>
+      <circle cx="60" cy="60" r="44" stroke="#C9A86A" stroke-width="0.5" opacity="0.35"/>
+      <path d="M60 18 A42 42 0 0 1 92 78" stroke="#C9A86A" stroke-width="1.25" stroke-linecap="round"/>
+      <circle cx="24" cy="22" r="2" fill="#C9A86A" opacity="0.6"/>
+      <circle cx="98" cy="40" r="1.5" fill="#C9A86A" opacity="0.4"/>
+    </svg>
+    <p class="loader-word">MALAY&nbsp;RESTAURANT</p>
+    <div class="loader-bar"><span></span></div>
+  </div>
+</div>
+
+<!-- ============ NAVIGATION ============ -->
+<header id="nav">
+  <a class="brand" href="#home" aria-label="Malay Restaurant home">
+    <img src="assets/logo.png" alt="Malay Restaurant logo" class="brand-logo">
+    <span class="brand-name">MALAY <em>RESTAURANT</em></span>
+  </a>
+  <nav class="nav-links" id="navLinks">
+    <a href="#story" class="nav-link">Story</a>
+    <a href="#brands" class="nav-link">Brands</a>
+    <a href="#menu" class="nav-link">Menu</a>
+    <a href="#catering" class="nav-link">Catering</a>
+    <a href="#experience" class="nav-link">Experience</a>
+    <a href="#location" class="nav-link">Location</a>
+    <a href="#catering" class="btn btn-gold btn-nav">Request a Quote</a>
+    <a href="https://malayrestaurant.appigo.co" target="_blank" rel="noopener" class="btn btn-ghost btn-nav">Order Online</a>
+  </nav>
+  <button id="burger" aria-label="Toggle menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<!-- ============ MOBILE MENU ============ -->
+<div id="mobileMenu" aria-hidden="true">
+  <nav class="mobile-links">
+    <a href="#home" class="m-link">Home</a>
+    <a href="#story" class="m-link">Our Story</a>
+    <a href="#brands" class="m-link">Brands</a>
+    <a href="#menu" class="m-link">Menu</a>
+    <a href="#catering" class="m-link">Catering</a>
+    <a href="#experience" class="m-link">Experience</a>
+    <a href="#explore" class="m-link">Gallery</a>
+    <a href="#location" class="m-link">Location</a>
+    <a href="#contact" class="m-link">Contact</a>
+    <a href="#catering" class="btn btn-gold btn-wide">Request a Quote</a>
+    <a href="https://malayrestaurant.appigo.co" target="_blank" rel="noopener" class="btn btn-ghost btn-wide">Order Online</a>
+  </nav>
+</div>
+
+<!-- ============ HERO / 3D ============ -->
+<section id="home" class="hero">
+  <canvas id="hero3d" aria-hidden="true"></canvas>
+  <div class="hero-vignette" aria-hidden="true"></div>
+  <div class="hero-content">
+    <p class="hero-eyebrow reveal" data-reveal>EST.&nbsp;DHIWALA&nbsp;&middot;&nbsp;HERITAGE&nbsp;FLAVOURS&nbsp;&middot;&nbsp;DINING&nbsp;&amp;&nbsp;DELIVERY</p>
+    <h1 class="hero-title reveal" data-reveal>
+      <span class="line">A Legacy <em>of Food.</em></span>
+      <span class="line">A Future <em>of Flavour.</em></span>
+    </h1>
+    <p class="hero-sub reveal" data-reveal>Authentic flavours, generations of culinary heritage, and unforgettable dining experiences in the heart of Dehiwala.</p>
+    <div class="hero-actions reveal" data-reveal>
+      <a href="#menu" class="btn btn-gold">Explore Our Menu</a>
+      <a href="#story" class="btn btn-ghost">Discover Our Story</a>
+    </div>
+  </div>
+  <div class="hero-scroll" aria-hidden="true">
+    <span class="scroll-label">SCROLL TO EXPLORE</span>
+    <span class="scroll-line"><i></i></span>
+  </div>
+</section>
+
+<main>
+
+<!-- ============ HERITAGE STORY ============ -->
+<section id="story" class="section story">
+  <div class="section-head reveal" data-reveal>
+    <p class="eyebrow">OUR STORY</p>
+    <h2 class="section-title">The <em>Legacy</em></h2>
+    <p class="section-intro">A culinary legacy passed down through generations. Built on heritage recipes, family values, and a love for authentic flavour.</p>
+  </div>
+
+  <div class="timeline reveal" data-reveal>
+    <div class="timeline-track" id="timelineTrack">
+
+      <article class="tl-item">
+        <div class="tl-node"><span class="tl-ring"></span></div>
+        <div class="tl-card">
+          <p class="tl-index">ORIGIN</p>
+          <h3>Rasa Sayang</h3>
+          <p>An authentic Malay food outlet in Bambalapitiya, whose legacy of taste lives on through the generations.</p>
+        </div>
+      </article>
+
+      <article class="tl-item">
+        <div class="tl-node"><span class="tl-ring"></span></div>
+        <div class="tl-card">
+          <p class="tl-index">THE KEEPER OF RECIPES</p>
+          <h3>Ayub / Ayoub Muthalip</h3>
+          <p>Credited with maintaining the original recipes while blending Malay cuisine with Chinese, Indian and Arabic influences.</p>
+        </div>
+      </article>
+
+      <article class="tl-item">
+        <div class="tl-node"><span class="tl-ring"></span></div>
+        <div class="tl-card">
+          <p class="tl-index">THE HERITAGE FLAGSHIP</p>
+          <h3>Malay Restaurant</h3>
+          <p>Where generations of authentic recipes found a home — 115 Hill Street, Dehiwala.</p>
+        </div>
+      </article>
+
+      <article class="tl-item">
+        <div class="tl-node"><span class="tl-ring"></span></div>
+        <div class="tl-card">
+          <p class="tl-index">TODAY</p>
+          <h3>Malay Fast Foods</h3>
+          <p>A family-associated food and restaurant business, stewarded forward through a commitment to authentic recipes and continual innovation.</p>
+        </div>
+      </article>
+
+    </div>
+  </div>
+
+  <div class="story-note reveal" data-reveal>
+    <img class="story-img" src="assets/restaurant-1.jpg" alt="Malay Restaurant, Dehiwala" loading="lazy">
+    <blockquote>Tradition preserved. Flavour evolved. A legacy continues.</blockquote>
+  </div>
+</section>
+
+<!-- ============ CULINARY IDENTITY ============ -->
+<section id="cuisine" class="section cuisine">
+  <div class="cuisine-bg" aria-hidden="true"></div>
+  <div class="section-head reveal" data-reveal>
+    <p class="eyebrow">CULINARY IDENTITY</p>
+    <h2 class="section-title">Flavours <em>Without Borders</em></h2>
+    <p class="section-intro">Malay Restaurant's cuisine brings together five great culinary traditions under one roof — a rare harmony of heritage and taste.</p>
+  </div>
+
+  <div class="flavour-wheel reveal" data-reveal>
+    <div class="wheel-core" aria-hidden="true">
+      <svg viewBox="0 0 200 200">
+        <circle cx="100" cy="100" r="98" fill="none" stroke="#C9A86A" stroke-opacity="0.45" stroke-width="0.75"/>
+        <circle cx="100" cy="100" r="78" fill="none" stroke="#C9A86A" stroke-opacity="0.3" stroke-width="0.5" stroke-dasharray="2 6"/>
+        <circle cx="100" cy="100" r="30" fill="none" stroke="#C9A86A" stroke-opacity="0.3" stroke-width="0.5"/>
+      </svg>
+      <p class="wheel-label">MALAY<br><em>RESTAURANT</em></p>
+    </div>
+
+    <div class="flavour w1"><span class="fl-icon">◆</span><h3>Malay</h3><p>Heritage &amp; traditional flavours</p></div>
+    <div class="flavour w2"><span class="fl-icon">✿</span><h3>Sri Lankan</h3><p>Local culinary identity</p></div>
+    <div class="flavour w3"><span class="fl-icon">✧</span><h3>Chinese</h3><p>Asian influence</p></div>
+    <div class="flavour w4"><span class="fl-icon">✦</span><h3>Indian</h3><p>Spices &amp; cooking traditions</p></div>
+    <div class="flavour w5"><span class="fl-icon">❖</span><h3>Arabic</h3><p>Regional flavour influences</p></div>
+  </div>
+</section>
+
+<!-- ============ SIGNATURE FOOD ============ -->
+<section id="signature" class="section sigfood">
+  <div class="section-head reveal" data-reveal>
+    <p class="eyebrow">SIGNATURE FOOD</p>
+    <h2 class="section-title">Dishes That <em>Define Us</em></h2>
+    <p class="section-intro">Two signature creations, crafted from recipes carried through generations.</p>
+  </div>
+
+  <div class="dish-grid">
+    <article class="dish-card tilt reveal" data-reveal data-tilt>
+      <div class="dish-media">
+        <img src="assets/hero-food.jpg" alt="Signature Lamprais" loading="lazy">
+        <span class="dish-tag">MALAY SPECIAL</span>
+      </div>
+      <div class="dish-body">
+        <h3>Lamprais</h3>
+        <p>The classic — fragrant rice, rich accompaniments and slow-cooked depth, wrapped and baked to order.</p>
+      </div>
+    </article>
+
+    <article class="dish-card tilt reveal" data-reveal data-tilt>
+      <div class="dish-media">
+        <img src="assets/restaurant-2.jpg" alt="Malay-style dum biryani" loading="lazy">
+        <span class="dish-tag">MALAY SPECIAL</span>
+      </div>
+      <div class="dish-body">
+        <h3>Malay-Style Dum Biryani</h3>
+        <p>Fragrant rice sealed over perfectly spiced meat — a Malay take on a much-loved tradition.</p>
+      </div>
+    </article>
+  </div>
+
+  <div class="menu-strip reveal" data-reveal id="menuStrip">
+    <p class="strip-label">THE MENU EXPLORES</p>
+    <div class="strip">
+      <span>Mojito</span><i></i><span>Lassi</span><i></i><span>Milk Shakes</span><i></i><span>Fresh Juices</span><i></i><span>Smoothies</span><i></i><span>Fizzy Drinks</span><i></i><span>Kottu Corner</span><i></i><span>String Hoppers Kottu</span><i></i><span>Roti Corner</span><i></i><span>Noodles</span><i></i><span>Rice Dishes</span><i></i><span>Chicken</span><i></i><span>Beef &amp; Mutton</span><i></i><span>Malay Beef Specials</span><i></i><span>Prawn, Crab &amp; Fish</span><i></i><span>Vegetables</span><i></i><span>Add-Ons</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MENU EXPERIENCE ============ -->
+<section id="menu" class="section menuexp">
+  <div class="section-head reveal" data-reveal>
+    <p class="eyebrow">THE MENU</p>
+    <h2 class="section-title">Explore By <em>Craving</em></h2>
+    <p class="section-intro">The full Malay Restaurant menu — from Rasa Sayang noodles and kottu corner to rice dishes, Malaysian specials and handcrafted drinks.</p>
+  </div>
+
+  <div class="menu-stage reveal" data-reveal>
+    <div class="menu-rail">
+      <div class="plate3d tilt" id="plate3d">
+        <div class="plate-rim" aria-hidden="true"></div>
+        <div class="plate-disc">
+          <img id="plateImg" src="assets/hero-food.jpg" alt="Signature dish" loading="lazy">
+        </div>
+        <div class="plate-shadow" aria-hidden="true"></div>
+      </div>
+      <div class="menu-note">
+        <p>Prices in <span>Sri Lankan Rupees (LKR)</span> &mdash; prepared fresh, every day.</p>
+        <a href="https://malayrestaurant.appigo.co" target="_blank" rel="noopener" class="btn btn-gold">VIEW FULL MENU</a>
+      </div>
+    </div>
+
+    <div class="menu-browser">
+      <div class="cat-tabs" id="catTabs" role="tablist" aria-label="Menu categories"></div>
+      <div class="dish-panel" id="dishPanel">
+        <div class="dp-head">
+          <h4 id="dpTitle"></h4>
+          <span id="dpCount"></span>
+        </div>
+        <ul id="dpList"></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ RESTAURANT EXPERIENCE ============ -->
+<section id="experience" class="section experience">
+  <div class="exp-media reveal" data-reveal>
+    <img src="assets/restaurant-1.jpg" alt="Inside Malay Restaurant" class="exp-img exp-img-main" loading="lazy">
+    <img src="assets/restaurant-2.jpg" alt="Malay Restaurant hospitality" class="exp-img exp-img-sub" loading="lazy">
+  </div>
+  <div class="exp-copy reveal" data-reveal>
+    <p class="eyebrow">THE EXPERIENCE</p>
+    <h2 class="section-title">More Than <em>a Meal</em></h2>
+    <p>A place where heritage meets hospitality, and every meal becomes part of the experience. Family dining, warm service, and food that carries a story.</p>
+    <ul class="exp-list">
+      <li><span>01</span> Halal, family-oriented dining</li>
+      <li><span>02</span> Authentic recipes cooked to order</li>
+      <li><span>03</span> Dine-in, takeaway &amp; delivery</li>
+    </ul>
+    <a href="#menu" class="btn btn-ghost">Plan Your Visit</a>
+  </div>
+</section>
+
+<!-- ============ GALLERY ============ -->
+<section id="explore" class="section gallery">
+  <div class="section-head reveal" data-reveal>
+    <p class="eyebrow">GALLERY</p>
+    <h2 class="section-title">A Visual <em>Invitation</em></h2>
+    <p class="section-intro">Food, restaurant, heritage and experience — in frames.</p>
+  </div>
+  <div class="gal-grid reveal" data-reveal>
+    <figure class="gal-item gal-food" data-modal="Food — Signature dishes prepared daily.">
+      <img src="assets/hero-food.jpg" alt="Signature dish" loading="lazy">
+      <figcaption>Food</figcaption>
+    </figure>
+    <figure class="gal-item gal-rest" data-modal="Restaurant — The dining room at 115 Hill Street.">
+      <img src="assets/restaurant-1.jpg" alt="Malay Restaurant dining room" loading="lazy">
+      <figcaption>Restaurant</figcaption>
+    </figure>
+    <figure class="gal-item gal-heritage" data-modal="Heritage — A legacy passed down through generations.">
+      <img src="assets/logo.png" alt="Malay Restaurant heritage mark" loading="lazy">
+      <figcaption>Heritage</figcaption>
+    </figure>
+    <figure class="gal-item gal-exp" data-modal="Experience — Hospitality, warmth and authentic flavour.">
+      <img src="assets/restaurant-2.jpg" alt="Malay Restaurant experience" loading="lazy">
+      <figcaption>Experience</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ============ LOCATION ============ -->
+<section id="location" class="section location">
+  <div class="loc-copy reveal" data-reveal>
+    <p class="eyebrow">FIND US</p>
+    <h2 class="section-title">In the Heart <em>of Dehiwala</em></h2>
+    <address class="loc-address">
+      <strong>Malay Restaurant</strong><br>
+      115 Hill Street,<br>
+      Dehiwala 10350, Sri Lanka
+    </address>
+    <div class="loc-actions">
+      <a href="https://www.google.com/maps/search/?api=1&query=Malay+Restaurant,+115+Hill+Street,+Dehiwala,+Sri+Lanka" target="_blank" rel="noopener" class="btn btn-gold">GET DIRECTIONS</a>
+      <a href="tel:+94117777999" class="btn btn-ghost">CALL RESTAURANT</a>
+    </div>
+    <p class="loc-phone">+94 11 777 7999</p>
+  </div>
+  <div class="loc-map reveal" data-reveal>
+    <div class="map-frame">
+      <iframe title="Malay Restaurant, 115 Hill Street, Dehiwala" src="https://www.google.com/maps?q=Malay+Restaurant,+115+Hill+Street,+Dehiwala,+Sri+Lanka&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DIGITAL ORDERING ============ -->
+<section id="order" class="section order">
+  <div class="order-inner reveal" data-reveal>
+    <div class="order-copy">
+      <p class="eyebrow">DIGITAL ORDERING</p>
+      <h2 class="section-title white-title">Craving <em>Malay?</em></h2>
+      <p>Order your favourites from wherever you are — delivered fresh, fast, and full of flavour.</p>
+      <a href="https://malayrestaurant.appigo.co" target="_blank" rel="noopener" class="btn btn-gold btn-lg">ORDER ONLINE</a>
+    </div>
+    <div class="order-plate" aria-hidden="true">
+      <img src="assets/hero-food.jpg" alt="" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<!-- ============ MULTI-BRAND ============ -->
+<section id="brands" class="section brands">
+  <div class="section-head reveal" data-reveal>
+    <p class="eyebrow">THE WIDER STORY</p>
+    <h2 class="section-title">One Heritage. <em>Many Flavours.</em></h2>
+    <p class="section-intro">Explore the wider culinary portfolio associated with the Malay Fast Foods story — a family of concepts built to serve different tastes and occasions.</p>
+  </div>
+  <div class="brand-grid reveal" data-reveal>
+    <a class="brand-card brand-primary tilt" data-tilt data-brand="malay" href="/malay-restaurant/"><span class="b-flag">FLAGSHIP</span><span class="b-mark">MR</span><h3>Malay Restaurant</h3><p>Heritage flagship &mdash; Rasa Sayang noodles, kottu, Malay specials &amp; more</p><span class="b-stat">311 dishes</span></a>
+    <a class="brand-card tilt" data-tilt data-brand="asiana" href="/cafe-asiana/"><span class="b-mark">CA</span><h3>Cafe Asiana</h3><p>Contemporary Asian dining &mdash; its own pan-Asian menu</p><span class="b-stat">170 dishes</span></a>
+    <a class="brand-card tilt" data-tilt data-brand="shanghai" href="/shanghai-wok/"><span class="b-mark">SW</span><h3>Shanghai Wok</h3><p>Chinese, fast &amp; fresh &mdash; fried rice, noodles &amp; wok sides</p><span class="b-stat">29 dishes</span></a>
+    <a class="brand-card tilt" data-tilt data-brand="nelum" href="/nelum-flower/"><span class="b-mark">NF</span><h3>Nelum Flower</h3><p>Everyday Sri Lankan food &mdash; rice &amp; curry, kottu, hoppers</p><span class="b-stat">87 dishes</span></a>
+    <a class="brand-card tilt" data-tilt data-brand="pdarbar" href="/pakistan-darbar/"><span class="b-mark" style="background:#8a2f1d;color:#f3e2c2">PD</span><h3>Pakistan Darbar</h3><p>BBQ, biryani &amp; Arabic &mdash; kababs, kabsa &amp; shawarma</p></a>
+    <a class="brand-card tilt" data-tilt data-brand="darbar" href="/darbar-biryani-bbq/"><span class="b-mark">DB</span><h3>Darbar Biryani &amp; BBQ</h3><p>Biryani &amp; BBQ specialist &mdash; built for families &amp; events</p></a>
+  </div>
+
+  <p class="brand-hint reveal" data-reveal>Each concept has its own page &mdash; select one to open it, or preview it below.</p>
+
+  <div class="brand-switcher reveal" data-reveal id="brandSwitcher">
+    <div class="bs-label">QUICK PREVIEW &mdash; OR OPEN A CONCEPT'S OWN PAGE</div>
+    <div class="bs-chips" id="bsChips"></div>
+    <div class="bs-panel" id="bsPanel"></div>
+  </div>
+</section>
+
+<!-- ============ CATERING ============ -->
+<section id="catering" class="cater">
+  <div class="cater-inner">
+
+    <div class="cater-head reveal" data-reveal>
+      <span class="cater-cap">CATERING</span>
+      <h2 class="cater-title">Food for <em>Every Occasion.</em></h2>
+      <p class="cater-intro">From weddings and corporate events to birthdays, religious functions and office lunches &mdash; explore catering possibilities across the group&rsquo;s diverse culinary concepts.</p>
+    </div>
+
+    <div class="occasions reveal" data-reveal>
+      <button class="occasion-card" data-type="Wedding" style="--accent:#B4573A">
+        <span class="ok-ic">W</span><h3>Weddings</h3><p>Elegant large-scale celebrations.</p>
+      </button>
+      <button class="occasion-card" data-type="Corporate Event" style="--accent:#6B7F9E">
+        <span class="ok-ic">Co</span><h3>Corporate Events</h3><p>Office lunches, conferences and business events.</p>
+      </button>
+      <button class="occasion-card" data-type="Birthday" style="--accent:#C9A86A">
+        <span class="ok-ic">B</span><h3>Birthdays</h3><p>Family celebrations and private gatherings.</p>
+      </button>
+      <button class="occasion-card" data-type="Religious Function" style="--accent:#3F7D5B">
+        <span class="ok-ic">R</span><h3>Religious Functions</h3><p>Group dining for religious and community occasions.</p>
+      </button>
+      <button class="occasion-card" data-type="Private Event" style="--accent:#7C6A9E">
+        <span class="ok-ic">P</span><h3>Private Events</h3><p>Custom menus for special gatherings.</p>
+      </button>
+      <button class="occasion-card" data-type="Party" style="--accent:#A8864E">
+        <span class="ok-ic">L</span><h3>Large Gatherings</h3><p>Multi-cuisine catering for larger groups.</p>
+      </button>
+    </div>
+
+    <div class="cater-form reveal" data-reveal id="cateringFormWrap">
+      <div class="cf-grid">
+        <aside class="cf-side">
+          <div class="cf-head">
+            <span class="cater-cap">REQUEST A CATERING QUOTE</span>
+            <h2 class="cater-title">Request a <em>Catering Quote</em></h2>
+            <p>Tell us about your event and our team will help you build the right catering experience &mdash; across the group&rsquo;s six culinary concepts.</p>
+          </div>
+          <div class="cf-promise">
+            <div class="cfp-item"><span>01</span> One group, six concepts &mdash; Malay, Chinese, Sri Lankan, Pakistani &amp; more</div>
+            <div class="cfp-item"><span>02</span> Fresh, cooked-to-order menus built around your event</div>
+            <div class="cfp-item"><span>03</span> A dedicated team responds to every enquiry personally</div>
+            <div class="cfp-item"><span>04</span> Halal family hospitality, from heritage to modern</div>
+          </div>
+          <div class="cf-contact">
+            <span class="cater-cap">TALK TO US</span>
+            <a href="tel:+94117777999">+94 11 777 7999</a>
+            <a href="mailto:catering@malayfastfoods.lk">catering@malayfastfoods.lk</a>
+          </div>
+        </aside>
+
+        <form id="cateringForm" novalidate>
+          <fieldset>
+            <legend>Personal Information</legend>
+            <div class="cf-row">
+              <label>Full Name *
+                <input id="cfName" class="cf-field" type="text" autocomplete="name" placeholder="e.g. Ahmed Mubarak">
+                <small class="cf-err" id="cfNameErr"></small>
+              </label>
+              <label>Phone Number *
+                <input id="cfPhone" class="cf-field" type="tel" autocomplete="tel" placeholder="e.g. +94 77 123 4567">
+                <small class="cf-err" id="cfPhoneErr"></small>
+              </label>
+            </div>
+            <label>Email Address *
+              <input id="cfEmail" class="cf-field" type="email" autocomplete="email" placeholder="you@example.com">
+              <small class="cf-err" id="cfEmailErr"></small>
+            </label>
+          </fieldset>
+
+          <fieldset>
+            <legend>Event Details</legend>
+            <div class="cf-row">
+              <label>Event Type *
+                <select id="cfEventType" class="cf-field">
+                  <option value="">Select event type…</option>
+                  <option>Wedding</option><option>Corporate Event</option><option>Birthday</option>
+                  <option>Religious Function</option><option>Office Lunch</option><option>Private Event</option>
+                  <option>Engagement</option><option>Party</option><option>Other</option>
+                </select>
+                <small class="cf-err" id="cfEventTypeErr"></small>
+              </label>
+              <label>Event Date *
+                <input id="cfDate" class="cf-field" type="date">
+                <small class="cf-err" id="cfDateErr"></small>
+              </label>
+              <label>Number of Guests *
+                <input id="cfGuests" class="cf-field" type="number" min="1" placeholder="e.g. 100">
+                <small class="cf-err" id="cfGuestsErr"></small>
+              </label>
+            </div>
+            <label>Event Location *
+              <input id="cfLocation" class="cf-field" type="text" placeholder="Venue or area, e.g. Mount Lavinia">
+              <small class="cf-err" id="cfLocationErr"></small>
+            </label>
+          </fieldset>
+
+          <fieldset>
+            <legend>Which culinary concept would you like to cater from?</legend>
+            <select id="cfBrand" class="cf-field">
+              <option value="malay">Malay Restaurant</option>
+              <option value="asiana">Cafe Asiana</option>
+              <option value="shanghai">Shanghai Wok</option>
+              <option value="nelum">Nelum Flower</option>
+              <option value="pdarbar">Pakistan Darbar</option>
+              <option value="darbar">Darbar Biryani &amp; BBQ</option>
+              <option value="any">Any / Not Sure</option>
+            </select>
+            <p class="cf-note" id="cfBrandNote" style="display:none">Tell us about your event and our team can recommend the most suitable culinary concept.</p>
+            <div class="cf-brand-rec" id="cfBrandRec" hidden>
+              <div class="cbr-head">
+                <span class="cbr-tag">AUTOMATED RECOMMENDATION</span>
+                <span class="cbr-model">rule-based &middot; based on your selections</span>
+              </div>
+              <div class="cbr-body"><span>Recommended concept</span><strong id="cbrName">&mdash;</strong></div>
+              <p class="cbr-reason" id="cbrReason"></p>
+              <button type="button" class="cbr-pick" id="cbrPick">Use this concept</button>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Service Type &amp; Budget</legend>
+            <div class="cf-row">
+              <label>Service Type *
+                <select id="cfService" class="cf-field">
+                  <option value="">Select service…</option><option>Food Delivery</option><option>Buffet</option>
+                  <option>Full Catering</option><option>Drop-off Catering</option><option>On-site Service</option><option>Not Sure</option>
+                </select>
+                <small class="cf-err" id="cfServiceErr"></small>
+              </label>
+              <label>Approximate Budget (LKR)
+                <input id="cfBudget" class="cf-field" type="text" inputmode="numeric" placeholder="e.g. 150000">
+              </label>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Food Preferences</legend>
+            <div class="cf-checks" id="cfCuisines">
+              <label class="cf-check"><input type="checkbox" value="Malay"><span>Malay</span></label>
+              <label class="cf-check"><input type="checkbox" value="Sri Lankan"><span>Sri Lankan</span></label>
+              <label class="cf-check"><input type="checkbox" value="Chinese"><span>Chinese</span></label>
+              <label class="cf-check"><input type="checkbox" value="Indian"><span>Indian</span></label>
+              <label class="cf-check"><input type="checkbox" value="Pakistani"><span>Pakistani</span></label>
+              <label class="cf-check"><input type="checkbox" value="Arabic"><span>Arabic</span></label>
+              <label class="cf-check"><input type="checkbox" value="BBQ"><span>BBQ</span></label>
+              <label class="cf-check"><input type="checkbox" value="Biryani"><span>Biryani</span></label>
+              <label class="cf-check"><input type="checkbox" value="Vegetarian"><span>Vegetarian</span></label>
+              <label class="cf-check"><input type="checkbox" value="Seafood"><span>Seafood</span></label>
+              <label class="cf-check"><input type="checkbox" value="Halal"><span>Halal</span></label>
+            </div>
+            <p class="cf-hint" id="cfCuisineHint"></p>
+          </fieldset>
+
+          <fieldset>
+            <legend>How did you hear about us?</legend>
+            <select id="cfSource" class="cf-field">
+              <option value="Website">Website</option><option>Instagram</option><option>Facebook</option>
+              <option>Google</option><option>WhatsApp</option><option>Referral</option><option>Other</option>
+            </select>
+            <input id="cfSourceOther" class="cf-field cf-other" type="text" placeholder="Please specify…" style="display:none">
+          </fieldset>
+
+          <fieldset>
+            <legend>Additional Message</legend>
+            <textarea id="cfMsg" class="cf-field" rows="4" placeholder="Tell us about your event, menu preferences, dietary requirements, timing or anything else we should know."></textarea>
+          </fieldset>
+
+          <button type="submit" class="cf-submit">Request a Catering Quote</button>
+          <p class="cf-priv">Your details are shared only with our catering team to prepare your quote.</p>
+        </form>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ BRAND VALUES ============ -->
+<section id="values" class="section values">
+  <div class="values-sticky">
+    <p class="eyebrow reveal" data-reveal>OUR VALUES</p>
+    <div class="value-line"><span class="v-idx">01</span><h3>Respect <em>the Food.</em></h3></div>
+    <div class="value-line"><span class="v-idx">02</span><h3>Respect <em>the Customer.</em></h3></div>
+    <div class="value-line"><span class="v-idx">03</span><h3>Respect <em>the Heritage.</em></h3></div>
+    <div class="value-line"><span class="v-idx">04</span><h3>Keep <em>Innovating.</em></h3></div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FINAL CTA ============ -->
+<section id="cta" class="section finalcta">
+  <div class="section-head reveal" data-reveal>
+    <p class="eyebrow">PLANNING SOMETHING SPECIAL?</p>
+    <h2 class="section-title white-title">Bring Together the Flavours<br><em>Your Guests Will Remember.</em></h2>
+    <div class="final-actions reveal" data-reveal>
+      <a href="#catering" class="btn btn-gold btn-lg">Request a Catering Quote</a>
+      <a href="#brands" class="btn btn-ghost btn-lg">Explore Our Brands</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer id="contact" class="footer">
+  <div class="foot-grid">
+    <div class="foot-brand">
+      <img src="assets/logo.png" alt="Malay Restaurant" class="foot-logo" loading="lazy">
+      <p class="foot-tag">A Legacy of Food.<br>A Future of Flavour.</p>
+      <p class="foot-meta">Malay Fast Foods (Pvt) Ltd. is a family-associated food and restaurant business, with Shuayb Muthalip publicly identified as a Director.</p>
+      <a class="foot-official" href="https://malay-fast-foods-ltd.base44.app" target="_blank" rel="noopener">Visit the wider Malay Fast Foods site&nbsp;&rarr;</a>
+    </div>
+    <div class="foot-col">
+      <h4>Explore</h4>
+      <a href="#story">Our Story</a>
+      <a href="#brands">Brands</a>
+      <a href="#menu">Menu</a>
+      <a href="#catering">Catering</a>
+      <a href="#experience">Experience</a>
+      <a href="#explore">Gallery</a>
+    </div>
+    <div class="foot-col">
+      <h4>Visit</h4>
+      <a href="#location">Location</a>
+      <a href="tel:+94117777999">+94 11 777 7999</a>
+      <a href="https://malayrestaurant.appigo.co" target="_blank" rel="noopener">Order Online</a>
+      <a href="#contact">Contact</a>
+      <a href="/admin/login.html" rel="nofollow">Staff Portal</a>
+    </div>
+    <div class="foot-col">
+      <h4>Address</h4>
+      <p>115 Hill Street,<br>Dehiwala 10350,<br>Sri Lanka</p>
+    </div>
+  </div>
+  <div class="foot-bottom">
+    <p>&copy; <span id="year"></span> Malay Restaurant. All Rights Reserved.</p>
+    <p class="foot-sub">Halal &middot; Family dining &middot; Dine-in &middot; Takeaway &middot; Delivery</p>
+  </div>
+</footer>
+
+<!-- ============ LIGHTBOX ============ -->
+<div id="lightbox" aria-hidden="true">
+  <button id="lbClose" aria-label="Close">×</button>
+  <figure>
+    <img id="lbImg" src="" alt="">
+    <figcaption id="lbCap"></figcaption>
+  </figure>
+</div>
+
+<!-- ============ CATERING CONFIRMATION ============ -->
+<div id="cateringConfirm" aria-hidden="true">
+  <div class="calert">
+    <div class="calert-mark">M</div>
+    <span class="cater-cap">REQUEST RECEIVED</span>
+    <h2 class="cater-title">Thank You</h2>
+    <p>Your catering request has been received.</p>
+    <div class="calert-ref">Reference: <b id="confirmRef" class="mono">#CAT-2026-0000</b></div>
+    <p class="calert-note">Our team will review your requirements and contact you regarding your request. Track its progress anytime through your request page.</p>
+    <div class="calert-actions">
+      <button class="btn btn-ghost" id="confirmOk">Back to Website</button>
+      <a class="btn btn-gold" id="confirmStatusLink" href="quote.html?ref=">View Request Status</a>
+    </div>
+  </div>
+</div>
+
+<!-- ============ MOBILE STICKY CTA ============ -->
+<div class="sticky-cta">
+  <a href="tel:+94117777999" class="btn btn-ghost">Call</a>
+  <a href="#catering" class="btn btn-gold">Request a Quote</a>
+  <a href="https://malayrestaurant.appigo.co" target="_blank" rel="noopener" class="btn btn-ghost">Order Online</a>
+</div>
+
+<!-- ============ SCRIPTS ============ -->
+<script src="vendor/gsap.min.js"></script>
+<script src="vendor/ScrollTrigger.min.js"></script>
+<script src="vendor/three.min.js"></script>
+<script src="js/menu-data.js"></script>
+<script src="js/crm-data.js"></script>
+<script src="js/scene.js"></script>
+<script src="js/main.js"></script>
+<script src="js/catering.js"></script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MALAY — Catering CRM</title>
+<meta name="robots" content="noindex,nofollow">
+<link rel="stylesheet" href="/css/crm.css">
+<script>
+  (function () {
+    var KEY = 'mff_crm_admin_v1';
+    function authed() { try { return sessionStorage.getItem(KEY) === '1'; } catch (e) { return false; } }
+    if (!authed() && !/[?&](demo|relay)=1/.test(location.search)) {
+      location.replace('/admin/login.html');
+    }
+  })();
+</script>
+</head>
+<body>
+
+  <!-- LOGIN GATE (fallback for direct access / demo flag) -->
+  <div class="gate" id="gate">
+    <div class="gate-card">
+      <div class="brand-let">M</div>
+      <span class="cap">Catering CRM</span>
+      <h1>Malay Fast Foods</h1>
+      <p class="sub">Staff sign-in for the catering &amp; quotation desk.</p>
+      <label>Username</label>
+      <input class="in" type="text" id="loginUser" placeholder="Staff username" autocapitalize="none" spellcheck="false">
+      <label style="margin-top:14px">Password</label>
+      <input class="in" type="password" id="loginPass" placeholder="Password">
+      <p class="muted small" id="loginErr" style="color:var(--red);min-height:18px"></p>
+      <button class="btn wide" id="loginBtn">Sign in</button>
+      <p class="muted small" style="margin-top:18px">Demo build: data is stored in this browser only. Connect a secure backend (with hashed credentials) before production use.</p>
+    </div>
+  </div>
+
+  <!-- CRM SHELL -->
+  <div class="crm-shell">
+    <aside class="sidebar" id="crmSidebar">
+      <div class="side-logo">
+        <div class="mark">M</div>
+        <div><b>MALAY</b><span>Catering CRM</span></div>
+      </div>
+      <nav class="crm-nav">
+        <a href="#/dashboard" data-view="dashboard"><span class="ic">&#8962;</span> Dashboard</a>
+        <a href="#/requests" data-view="requests"><span class="ic">&#9993;</span> Catering Requests<span class="badge" id="msgCount"></span></a>
+        <a href="#/quotes" data-view="quotes"><span class="ic">&#10015;</span> Quotes</a>
+        <a href="#/customers" data-view="customers"><span class="ic">&#9783;</span> Customers</a>
+        <a href="#/calendar" data-view="calendar"><span class="ic">&#9719;</span> Calendar</a>
+        <a href="#/analytics" data-view="analytics"><span class="ic">&#9636;</span> Analytics</a>
+        <a href="#/messages" data-view="messages"><span class="ic">&#9776;</span> Messages<span class="badge" id="bellCount"></span></a>
+        <a href="#/settings" data-view="settings"><span class="ic">&#9881;</span> Settings</a>
+      </nav>
+      <div class="side-foot">
+        <b id="crmUserName">Admin</b><br>
+        <span>Malay Fast Foods (Pvt) Ltd</span><br>
+        <a class="link" data-view="log" href="#" style="font-size:.72rem;color:var(--red)">Sign out</a>
+      </div>
+    </aside>
+    <div class="mobile-mask" id="sideMask"></div>
+
+    <main class="main" id="crmMain">
+      <div class="header-top">
+        <button class="btn-ghost" id="menuBtn">&#9776; Menu</button>
+        <div class="mark">M&nbsp; MALAY CRM</div>
+        <span class="demo-badge">Demo</span>
+      </div>
+      <!-- section content injected here -->
+    </main>
+  </div>
+
+<script src="/js/crm-data.js"></script>
+<script src="/js/crm.js"></script>
+</body>
+</html>
